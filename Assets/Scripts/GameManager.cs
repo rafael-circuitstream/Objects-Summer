@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Transform> allSpawnPoints = new List<Transform>();
 
     [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private ItemSpawnerManager itemSpawner;
 
     public Action OnGameStart;
     public Action OnGameEnd;
@@ -54,6 +55,9 @@ public class GameManager : MonoBehaviour
             {
                 scoreManager.AddScore(10);
                 allSpawnedEnemies.Remove(clonedEnemy);
+
+                itemSpawner.TrySpawnItem(clonedEnemy.transform.position);
+
                 clonedEnemy.Explode();
             });
     }

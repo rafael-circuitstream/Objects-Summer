@@ -1235,6 +1235,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2200167471946051188, guid: be3eb1934e6b04848a6f681395aa8c4c, type: 3}
+      propertyPath: powerUpRates.Array.data[2].item
+      value: 
+      objectReference: {fileID: 4877362904266710199, guid: 38366aa10be68824ea9cadfd210a8b92, type: 3}
+    - target: {fileID: 2200167471946051188, guid: be3eb1934e6b04848a6f681395aa8c4c, type: 3}
+      propertyPath: powerUpRates.Array.data[2].spawnRate
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2662170627251019948, guid: be3eb1934e6b04848a6f681395aa8c4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1274,10 +1282,6 @@ PrefabInstance:
     - target: {fileID: 2662170627251019948, guid: be3eb1934e6b04848a6f681395aa8c4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4384731103718390502, guid: be3eb1934e6b04848a6f681395aa8c4c, type: 3}
-      propertyPath: lerpedNumber
-      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

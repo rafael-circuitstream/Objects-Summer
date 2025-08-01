@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2662170627251019948}
   - component: {fileID: 4384731103718390502}
   - component: {fileID: 1150643365559078024}
+  - component: {fileID: 2200167471946051188}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -96,6 +97,7 @@ MonoBehaviour:
   - {fileID: 9161718296509728555}
   - {fileID: 1832137456129479382}
   scoreManager: {fileID: 1150643365559078024}
+  itemSpawner: {fileID: 2200167471946051188}
 --- !u!114 &1150643365559078024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +112,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScore: 0
   highestScore: 0
+--- !u!114 &2200167471946051188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149402029372310572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf0bc59baeaa5748a06b1b19c17d205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpRates:
+  - item: {fileID: 4877362904266710199, guid: 21b5088afe928214d95d8be2d17c4ea1, type: 3}
+    spawnRate: 50
+  - item: {fileID: 4877362904266710199, guid: 38366aa10be68824ea9cadfd210a8b92, type: 3}
+    spawnRate: 50
+  powerUps:
+  - {fileID: 4877362904266710199, guid: 21b5088afe928214d95d8be2d17c4ea1, type: 3}
+  chanceOfSpawn: 40
 --- !u!1 &1838711049473059447
 GameObject:
   m_ObjectHideFlags: 0

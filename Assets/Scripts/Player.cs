@@ -59,13 +59,13 @@ public class Player : Character
             health.Damage(UnityEngine.Random.Range(1, 4));
         }
 
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown( KeyCode.P ))
         {
 
         }
 
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButtonDown(0))
         {
             Attack();
         }
@@ -102,6 +102,7 @@ public class Player : Character
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IPickable pickableFeature = collision.gameObject.GetComponent<IPickable>();
+
         //NULL IS EQUAL TO AN EMPTY SPACE (MEANING THE SEARCH WAS NOT SUCCESFUL)
         if (pickableFeature != null)
         {

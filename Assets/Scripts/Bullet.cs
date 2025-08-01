@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        /*
         foreach(Transform t in transform)
         {
             if(t.gameObject.name.Contains("Audio"))
@@ -19,7 +20,7 @@ public class Bullet : MonoBehaviour
             }
 
         }
-
+        */
 
         Destroy(gameObject, 5f);
         myRigidbody.linearVelocity = transform.up * speed;
