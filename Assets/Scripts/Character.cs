@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected int maxHealth;
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected Rigidbody2D myRigidbody;
-    [SerializeField] protected SpriteRenderer sprite;
+    //[SerializeField] protected SpriteRenderer sprite;
 
     //OPTION 2 FOR WEAPON SOUND:
     //[SerializeField] protected AudioSource characterAudio;
@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
 
     protected void ChangeSpriteColor(Color newColor)
     {
-        sprite.color = newColor;
+        //sprite.color = newColor;
     }
 
     protected void ChangeSpriteColor(float red, float blue, float green)
@@ -48,7 +48,7 @@ public class Character : MonoBehaviour
     public virtual void Move(Vector2 directionToMove, Vector2 directionToLook)
     {
         Move(directionToMove);
-        transform.up = directionToLook;
+        transform.up = Vector2.Lerp(transform.up, directionToLook, Time.deltaTime * 0.8f);
     }
 
     public virtual void Explode()

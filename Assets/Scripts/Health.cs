@@ -34,6 +34,8 @@ public class Health
     {
         value -= toDamage;
 
+        value = Mathf.Clamp(value, 0, 100);
+
         OnHealthChange?.Invoke(value);
 
         if(value <= 0)

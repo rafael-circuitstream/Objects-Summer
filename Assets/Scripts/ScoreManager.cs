@@ -27,4 +27,12 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", highestScore);
         }
     }
+    public int GetCurrentScore()
+    {
+        return currentScore;
+    }
+    public int GetHighestScore()
+    {
+        return highestScore;
+    }
 }

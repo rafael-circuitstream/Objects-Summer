@@ -66,8 +66,9 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         Debug.LogWarning("GameOver");
+
         OnGameEnd?.Invoke();
-        
+        Destroy(FindAnyObjectByType<Player>().gameObject);
     }
 
 
@@ -98,5 +99,10 @@ public class GameManager : MonoBehaviour
     {
         //lerpedColor = Color.Lerp(Color.red, Color.green, numberInterpolation);
         
+    }
+
+    public ScoreManager GetScoreManager()
+    {
+        return scoreManager;
     }
 }
